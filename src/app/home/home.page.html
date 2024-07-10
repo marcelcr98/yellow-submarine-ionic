@@ -1,0 +1,92 @@
+<ion-content>
+  <div class="d-flex-center wrapper" (click)="jump()">
+    <div *ngIf="!gameStarted" [ngStyle]="{
+      'background-size' : container_width+'px '+container_height+'px',
+      'width': container_width+'px',
+      'height':container_height+'px'
+    }">
+
+      <div *ngIf="!gameStarted" class="d-flex-center text">
+        <section>
+          <img *ngIf="!gameOver" class="bird-logo" src="/assets/images/bird-menu.gif">
+
+          <!-- Primer Juego -->
+          <div *ngIf="!gameOver">
+            <div class="subtext">Ionic v7</div>
+            Yellow Submarine
+          </div>
+
+          <img *ngIf="gameOver" class="over-logo" src="/assets/images/overbeat.gif">
+
+          <!-- Juego Finalizado -->
+          <div *ngIf="gameOver">
+            <div class="subtext">Juego Finalizado</div>
+            Puntaje: {{score}}
+          </div>
+
+
+        </section>
+
+      </div>
+
+      <div *ngIf="!gameStarted" class="d-flex-center">
+        <section>
+
+          <!-- Comenzar Juego -->
+          <button (click)="startGame()" class="ion-button-large">{{!gameOver ? 'Jugar' : 'Volver a Jugar'}}</button>
+
+          <!-- Activar/Desactivar Musica -->
+          <!--
+          <ion-button (click)="playMusic()" style="font-size: 18px;" color="success">
+            <ion-icon [name]="musicActive ? 'volume-high-outline' : 'volume-mute-outline'"></ion-icon>
+          </ion-button>-->
+        </section>
+      </div>
+
+      <section *ngIf="gameStarted">
+
+        <app-obstacle [height]="obstacle_height" [width]="obstacle_width" [left]="obstacle_position" [top]="0"
+          [rotation]="180">
+        </app-obstacle>
+
+        <app-bird [height]="bird_height" [width]="bird_width" [top]="bird_position">
+        </app-bird>
+
+        <app-obstacle [height]="container_height - obstacle_gap - obstacle_height" [width]="obstacle_width"
+          [left]="obstacle_position"
+          [top]="container_height - (obstacle_height + (container_height-obstacle_gap-obstacle_height))" [rotation]="0">
+        </app-obstacle>
+
+        <div class="score" style="font-size: 90px;">{{score}}</div>
+
+      </section>
+
+    </div>
+
+    <div class="background" *ngIf="gameStarted" [ngStyle]="{
+      'background-size' : container_width+'px '+container_height+'px',
+      'width': container_width+'px',
+      'height':container_height+'px'
+    }">
+
+      <section *ngIf="gameStarted">
+
+        <app-obstacle [height]="obstacle_height" [width]="obstacle_width" [left]="obstacle_position" [top]="0"
+          [rotation]="180">
+        </app-obstacle>
+
+        <app-bird [height]="bird_height" [width]="bird_width" [top]="bird_position">
+        </app-bird>
+
+        <app-obstacle [height]="container_height - obstacle_gap - obstacle_height" [width]="obstacle_width"
+          [left]="obstacle_position"
+          [top]="container_height - (obstacle_height + (container_height-obstacle_gap-obstacle_height))" [rotation]="0">
+        </app-obstacle>
+
+        <div class="score">{{score}}</div>
+
+      </section>
+
+    </div>
+  </div>
+</ion-content>

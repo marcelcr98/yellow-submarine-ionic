@@ -1,0 +1,125 @@
+.wrapper{
+  height: 100vh;
+  background: linear-gradient(to bottom, #0c89ff, #92edff)
+}
+
+.d-flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background{
+  background: url(/assets/images/bg-flappy.png) no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.text{
+  font-family: yellowsubmarine;
+  text-align: center;
+  height: 70vh;
+  animation: float 1.5s ease-in-out infinite;
+  font-size: 4em;
+  color: rgb(253, 209, 12);
+  text-shadow: 
+  -1px -1px 0 #db8e00,  
+  3px -1px 0 #db8e00,  
+  -1px 1px 0 #db8e00,  
+  3px 1px 0 #db8e00;
+
+  .subtext{
+    font-size: 35px;
+    padding-bottom: 10px;
+  }
+}
+
+.score{
+  font-family: yellowsubmarine;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 30%;
+  left: 50%;
+  font-size: 5em;
+  color: rgb(253, 209, 12);
+  text-shadow: 
+  -1px -1px 0 #000000,  
+  3px -1px 0 #000000,  
+  -1px 1px 0 #000000,  
+  3px 1px 0 #000000;
+}
+
+.bird-logo{
+ height: 220px;
+ width: 320px;
+}
+
+.over-logo{
+  height: 140px;
+  width: 220px;
+ }
+
+/* Estilos para el botón estilo ion-button large */
+.ion-button-large {
+  font-family: yellowsubmarine;
+  display: inline-block;
+  background-color: #033895; /* Color azul oscuro similar a Ionic */
+  color: #ffffff; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  padding: 12px 24px; /* Espaciado interno del botón para tamaño grande */
+  font-size: 40px; /* Tamaño de la fuente */
+  border-radius: 8px; /* Esquinas redondeadas */
+  cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave al cambiar el color de fondo y la sombra */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */;
+}
+
+.ion-button-large:hover {
+  background-color: #2d58a3; /* Color más oscuro al pasar el ratón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.ion-button-large:active {
+  background-color: #1e4db7; /* Color más oscuro al hacer clic */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer clic */
+}
+
+.ion-button-large:focus {
+  outline: none; /* Eliminar borde de enfoque */
+  box-shadow: 0 0 0 4px rgba(56, 128, 255, 0.5); /* Sombra de enfoque */
+}
+
+
+/* Estilos para el botón estilo ion-button cuadrado */
+.ion-button-square {
+  display: inline-block;
+  background-color: #3880ff; /* Color azul oscuro similar a Ionic */
+  color: #ffffff; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  padding: 12px 12px; /* Espaciado interno del botón */
+  font-size: 18px; /* Tamaño de la fuente */
+  border-radius: 0; /* Esquinas cuadradas */
+  cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave al cambiar el color de fondo y la sombra */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.ion-button-square:hover {
+  background-color: #3171e0; /* Color más oscuro al pasar el ratón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.ion-button-square:active {
+  background-color: #1e4db7; /* Color más oscuro al hacer clic */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer clic */
+}
+
+.ion-button-square:focus {
+  outline: none; /* Eliminar borde de enfoque */
+  box-shadow: 0 0 0 4px rgba(56, 128, 255, 0.5); /* Sombra de enfoque */
+}
+
+
+
+
+
